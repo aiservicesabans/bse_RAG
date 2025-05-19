@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rag-app:
+    build: .
+    container_name: rag-app
+    environment:
+      - QDRANT_URL=http://your-qdrant-host:6333
+      - QDRANT_API_KEY=your-api-key-if-needed
+    volumes:
+      - ./vector_output:/app/vector_output
